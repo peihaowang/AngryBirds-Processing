@@ -10,7 +10,11 @@
 
 First make sure that you have installed Processing 3. Click [here](https://processing.org/download/) for downloads.
 
-Then you may also need to install the following dependencies since several extended libraries are used in *AngryBirds-Processing*. Check [here](https://processing.org/reference/libraries/) for more information about adding libraries in Processing 3.
+Then you may also need to have the following dependencies installed, since several extended libraries are used in *AngryBirds-Processing*. Check [here](https://processing.org/reference/libraries/) for more information about adding libraries in Processing 3.
+
+* [Minim](http://code.compartmental.net/minim/)
+* [Box2D for Processing](https://github.com/shiffman/Box2D-for-Processing)
+* [Leap Motion for Processing](https://github.com/nok/leap-motion-processing)
 
 To install *AngryBirds-Processing*, open a terminate window and input command:
 
@@ -20,7 +24,7 @@ To install *AngryBirds-Processing*, open a terminate window and input command:
 
  After finishing dowloading, open the project with Processing 3, and then simply click the "Run" button to start the game.
 
- *AngryBirds-Processing* is only released as an open-source project.
+ *AngryBirds-Processing* is only released with source code.
 
  ## Acknowledgement
 
