@@ -45,3 +45,6 @@ To install *AngryBirds-Processing*, open a terminate window and input command:
 
 [Peihao Wang](https://github.com/peihaowang)
 [Jayson Haebich](http://jaysonh.com/index.htm)
+
+For more information about developing and extending *AngryBirds-Processing*, please email to me.
+
