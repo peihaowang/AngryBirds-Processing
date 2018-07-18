@@ -30,21 +30,21 @@ To install *AngryBirds-Processing*, open a terminate window and input command:
 
 *AngryBirds-Processing* pay tribute to the classical game Angry Birds and is never developed for commercial purposes, only for learning and playing. All originalities and designs are copyright to Rovio Entertainment Ltd. Materials and pictures are all collected from the Internet.
 
-[Rovio Entertainment Ltd.](http://www.rovio.com)
-[Angry Birds](https://www.angrybirds.com/games/)
-[Processing](https://processing.org)
-[Box2D](http://box2d.org)
-[JBox2D](http://www.jbox2d.org)
-[Box2D for Processing](https://github.com/shiffman/Box2D-for-Processing)
-[Leap Motion](https://www.leapmotion.com)
-[Leap Motion for Processing](https://github.com/nok/leap-motion-processing)
+* [Rovio Entertainment Ltd.](http://www.rovio.com)
+* [Angry Birds](https://www.angrybirds.com/games/)
+* [Processing](https://processing.org)
+* [Box2D](http://box2d.org)
+* [JBox2D](http://www.jbox2d.org)
+* [Box2D for Processing](https://github.com/shiffman/Box2D-for-Processing)
+* [Leap Motion](https://www.leapmotion.com)
+* [Leap Motion for Processing](https://github.com/nok/leap-motion-processing)
 
 ## Contributor
 
 *AngryBirds-Processing* are open for contributing, you are able to design your own birds, pigs, buildings and scenes by deriving the corresponding base classes and override the abstract methods.
 
-[Peihao Wang](https://github.com/peihaowang)
-[Jayson Haebich](http://jaysonh.com/index.htm)
+* [Peihao Wang](https://github.com/peihaowang)
+* [Jayson Haebich](http://jaysonh.com/index.htm)
 
 For more information about developing and extending *AngryBirds-Processing*, please email to me.
 
