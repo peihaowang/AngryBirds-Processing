@@ -39,8 +39,8 @@ boolean fullScreen = false;
 
 void setup()
 {
-  //fullScreen(P2D);
-  size(1000,800);
+  fullScreen(P2D);
+  //size(1000,800);
   smooth();
   
   leapMotion = new LeapMotion(this);
@@ -49,7 +49,7 @@ void setup()
   box2d = new Box2DProcessing(this);
   box2d.createWorld();
   box2d.listenForCollisions();
-  box2d.setGravity(0, -10);
+  box2d.setGravity(0, -20);
   
   imgOpenHand = loadImage("handcursor_open.png");
   imgCloseHand = loadImage("handcursor_close.png");

@@ -11,7 +11,7 @@ class Scene
   PVector             m_catapultCenter;
   boolean             m_dragging;
   
-  boolean              m_leapMotion;
+  boolean             m_leapMotion;
   
   Scene()
   {
@@ -28,7 +28,7 @@ class Scene
     m_catapultCenter = new PVector(100, height - 150);
     m_dragging = false;
     
-    m_leapMotion = false;
+    m_leapMotion = true;
   }
   
   void addPig(Pig pig) { m_pigs.add(pig); }
@@ -99,8 +99,9 @@ class Scene
           float handGrab = hand.getGrabStrength();
   
           // Keep tweak the range of x, y to make the operation better
-          float handX = map(handPosition.x, 400, 500, 0, width);
-          float handY = map(handPosition.y, 0, 800, 0, height);
+          float handX = map(handPosition.x, 700, 1400, 0, width);
+          float handY = map(handPosition.y, 350, 850, 0, height);
+          println(handPosition.x, handPosition.y);
           
           if(handGrab >= 0.8){
             onCursorDragged(handX, handY);
@@ -111,6 +112,7 @@ class Scene
             imageMode(CENTER);
             image(imgOpenHand, handX, handY);
           }
+          //hand.draw();
         }
       }
   }
