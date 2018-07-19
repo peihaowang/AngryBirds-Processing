@@ -4,7 +4,7 @@
 
 *AngryBirds-Processing* is a reimplementation of the popular game Angry Birds, powered by Processing and Box2D, with the extension of Leap Motion control. It was first created on a Creative Coding lesson, and then became open-source on GitHub, seeking for more contributors. *AngryBirds-Processing* is written with Processing in Java, with a physical engine Box2D to simulate the real world, and can be run on Windows, MacOS and Linux. In addition, *AngryBirds-Processing* supports features of Leap Motion, which means end-users are able to use hands in front of screen to trigger birds and interact with buttons.
 
-**AngryBirds-Processing is only designed to practice programming and game development, and cannot be used for any commercial purposes.**
+***AngryBirds-Processing* is only developed to practice programming and game development, and CANNOT BE USED FOR ANY COMMERCIAL PURPOSES.**
 
 ## Install and Run
 
