@@ -12,8 +12,7 @@ class NormalPig extends Pig
   // Drawing the box
   void onDraw(float x, float y, float a)
   {
-    rectMode(CENTER);
-    ellipseMode(CENTER);
+    imageMode(CENTER);
     pushMatrix();
     translate(x, y);
     rotate(a);

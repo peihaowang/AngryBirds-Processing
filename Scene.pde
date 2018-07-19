@@ -9,8 +9,11 @@ class Scene
   ArrayList<Pig>      m_pigs;
   
   PVector             m_catapultCenter;
-  boolean             m_dragging;
+  PVector             m_catapultInner;
+  PVector             m_catapultOuter;
   
+  boolean             m_dragging;
+
   boolean             m_leapMotion;
   
   Scene()
@@ -25,7 +28,10 @@ class Scene
     m_birds = new ArrayList<Bird>();
     m_pigs = new ArrayList<Pig>();
 
-    m_catapultCenter = new PVector(100, height - 150);
+    m_catapultCenter = new PVector(150, height - 150);
+    m_catapultInner = new PVector(170, height - 150);
+    m_catapultOuter = new PVector(130, height - 150);
+
     m_dragging = false;
     
     m_leapMotion = true;
@@ -43,11 +49,13 @@ class Scene
       bird.m_pos.set(m_catapultCenter.x - i * 30, height - 20);
     }
   }
-  
+
   void onDraw()
   {
       background(255);
 
+      pushMatrix();
+      pushStyle();
       // We must always step through time!
       box2d.step();
     
@@ -73,9 +81,23 @@ class Scene
           m_pigs.remove(i);
         }
       }
+
+      PVector birdJoint = new PVector(-1.0, -1.0);
+      if(!m_birds.isEmpty()){
+        Bird b = m_birds.get(0);
+        if(!b.gone()){
+          birdJoint.set(b.m_pos.x <= m_catapultCenter.x ? b.m_pos.x - b.m_w / 2 : b.m_pos.x + b.m_w / 2, b.m_pos.y);
+        }
+      }
       
       imageMode(CENTER);
       image(imgCatapultRight, m_catapultCenter.x, height - 100);
+
+      if(birdJoint.x >= 0 && birdJoint.y >= 0){
+        strokeWeight(5);
+        stroke(0);
+        line(birdJoint.x, birdJoint.y, m_catapultInner.x, m_catapultInner.y);
+      }
       
       for(int i = m_birds.size() - 1; i >= 0; i--){
         Bird b = m_birds.get(i);
@@ -88,33 +110,49 @@ class Scene
           }
         }
       }
-      
+
+      if(birdJoint.x >= 0 && birdJoint.y >= 0){
+        strokeWeight(5);
+        stroke(0);
+        line(birdJoint.x, birdJoint.y, m_catapultOuter.x, m_catapultOuter.y);
+      }
+
       imageMode(CENTER);
       image(imgCatapultLeft, m_catapultCenter.x, height - 100);
 
-      // Leap motion handling
+      // Leap motion controlling
       if(m_leapMotion){
         for(Hand hand : leapMotion.getHands()){
           PVector handPosition = hand.getPosition();
           float handGrab = hand.getGrabStrength();
-  
+          //println(handPosition.x, handPosition.y);
+          
           // Keep tweak the range of x, y to make the operation better
           float handX = map(handPosition.x, 700, 1400, 0, width);
-          float handY = map(handPosition.y, 350, 850, 0, height);
-          println(handPosition.x, handPosition.y);
+          float handY = map(handPosition.y, 400, 700, 0, height);
+          float handWidth = 70, handHeight = 70;
           
+          if(handX < handWidth / 2) handX = handWidth / 2;
+          else if(handX > width - handWidth / 2) handX = width - handWidth / 2;
+          if(handY < handHeight / 2) handY = handHeight / 2;
+          else if(handY > height - handHeight / 2) handY = height - handHeight / 2;
+
+          tint(255, 225);
           if(handGrab >= 0.8){
             onCursorDragged(handX, handY);
             imageMode(CENTER);
-            image(imgCloseHand, handX, handY);
+            image(imgCloseHand, handX, handY, 60, 60);
           }else{
             onCursorReleased(handX, handY);
             imageMode(CENTER);
-            image(imgOpenHand, handX, handY);
+            image(imgOpenHand, handX, handY, 60, 60);
           }
           //hand.draw();
         }
       }
+      
+      popStyle();
+      popMatrix();
   }
   
   void onCursorDragged(float x, float y)

@@ -11,7 +11,6 @@ class RedBird extends Bird
   void onDraw(float x, float y, float a)
   {
     imageMode(CENTER);
-    rectMode(CENTER);
     ellipseMode(CENTER);
     pushMatrix();
     translate(x, y);
