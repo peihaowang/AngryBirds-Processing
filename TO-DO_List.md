@@ -10,6 +10,7 @@
 5. More materials and buildings - Stone, Glass, etc.
 6. More scenes with creative and insteresting design.
 7. Add lively elements - backgrounds, music, sound effects, scene animation.
+8. Sketch the orbit where the birds fly
 
 ## Enhancement
 
