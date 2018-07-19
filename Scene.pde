@@ -183,7 +183,7 @@ class Scene
         Bird b = m_birds.get(0);
         if(!b.gone()){
           float dist = sqrt(pow(x - m_catapultCenter.x, 2.0) + pow(y - m_catapultCenter.y, 2.0));
-          m_birds.get(0).go(dist, new Vec2(m_catapultCenter.x, m_catapultCenter.y));
+          m_birds.get(0).go(dist / 2, new Vec2(m_catapultCenter.x, m_catapultCenter.y));
         }
       }
     }

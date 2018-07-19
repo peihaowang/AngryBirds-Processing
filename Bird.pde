@@ -44,6 +44,9 @@ abstract class Bird extends HitBody
   void onDisplay()
   {
     m_timer++;
+    
+    pushMatrix();
+    pushStyle();
     // Before init the physical properties, use m_pos to locate and render bird
     if(m_body != null){
       Vec2 pos = box2d.getBodyPixelCoord(m_body);
@@ -52,6 +55,8 @@ abstract class Bird extends HitBody
     }else{
       onDraw(m_pos.x, m_pos.y, m_rotation);
     }
+    popStyle();
+    popMatrix();
   }
 
   abstract void onDraw(float x, float y, float a);

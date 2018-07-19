@@ -86,7 +86,11 @@ abstract class Pig extends HitBody
     m_timer++;
     Vec2 pos = box2d.getBodyPixelCoord(m_body);
     float a = m_body.getAngle();
+    pushMatrix();
+    pushStyle();
     onDraw(pos.x, pos.y, -a);
+    popStyle();
+    popMatrix();
   }
 
   abstract void onDraw(float x, float y, float a);

@@ -13,8 +13,9 @@ class Wood extends Box
     Vec2 pos = box2d.getBodyPixelCoord(m_body);
     float a = m_body.getAngle();
 
-    imageMode(CENTER);
     pushMatrix();
+    pushStyle();
+    imageMode(CENTER);
     translate(pos.x, pos.y);
     rotate(-a);
     if(m_w > m_h){
@@ -22,6 +23,7 @@ class Wood extends Box
     }else{
       image(imgWoodV, 0, 0, m_w, m_h);
     }
+    popStyle();
     popMatrix();
   }
 
