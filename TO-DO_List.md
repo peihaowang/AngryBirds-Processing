@@ -17,3 +17,4 @@
 2. Add endurance to woods, stones, etc. for they could be destroyed by collision.
 3. Add animation or effects to simulate the damage of objects.
 4. Optimize the physical model and properties of birds, pigs and obstacles.
+5. Enlarge the scene and enable the viewport to move and zoom according to the position of birds
