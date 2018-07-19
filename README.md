@@ -19,10 +19,10 @@ Then you may also need to have the following dependencies installed, since sever
 To install *AngryBirds-Processing*, open a terminate window and input command:
 
  ```
- git clone git@github.com:peihaowang/AngryBirds-Processing.git
+ git clone https://github.com/peihaowang/AngryBirds-Processing.git
  ```
 
- After finishing dowloading, open the project with Processing 3, and then simply click the "Run" button to start the game.
+ After finishing dowloading, you also need to rename the project directory as `AngryBirds` so that you can open the project by double-clicking the file `AngryBirds.pde` subsequently. Within the Processing IDE, simply click the "Run" button to start the game. You might also get insterested in playing around the source code, refer to [here](https://processing.org/tutorials/) for more details about Processing.
 
  *AngryBirds-Processing* is only released with source code.
 
