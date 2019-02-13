@@ -6,6 +6,8 @@
 
 ***AngryBirds-Processing* is only developed to practice programming and game development, and CANNOT BE USED FOR ANY COMMERCIAL PURPOSES.**
 
+<img src="ScreenShot.png" title="Screenshot for AngryBirdsProcessing" width="60%" />
+
 ## Install and Run
 
 First make sure that you have installed Processing 3. Click [here](https://processing.org/download/) for downloads.
@@ -47,4 +49,3 @@ To install *AngryBirds-Processing*, open a terminate window and input command:
 * [Jayson Haebich](http://jaysonh.com/index.htm)
 
 For more information about developing and extending *AngryBirds-Processing*, please email to me.
-
